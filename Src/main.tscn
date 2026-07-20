@@ -3,7 +3,7 @@
 [ext_resource type="Shader" uid="uid://bkvlfijpk73m1" path="res://Src/shaders/super_gameboy.gdshader" id="1_sqjwk"]
 [ext_resource type="Texture2D" uid="uid://b43gfebc1ryqj" path="res://Assets/gpk_logo_transparent_1.png" id="2_25j1w"]
 [ext_resource type="Script" uid="uid://bvc1mwf1fxnka" path="res://Src/hud.gd" id="3_25j1w"]
-[ext_resource type="FontFile" uid="uid://b35expveve0yp" path="res://Super-Mario-World.ttf" id="4_25j1w"]
+[ext_resource type="FontFile" uid="uid://b35expveve0yp" path="res://Assets/Super-Mario-World.ttf" id="4_25j1w"]
 [ext_resource type="Shader" uid="uid://cvhvcx1r24xmn" path="res://Src/shaders/label.gdshader" id="4_ii6om"]
 [ext_resource type="Texture2D" uid="uid://qeinm3ltcs7o" path="res://Assets/Arrow_Button.png" id="4_lv4i0"]
 [ext_resource type="Texture2D" uid="uid://b5iwets73qp3s" path="res://Assets/o7pai08unbkfjs0gh1vm9t17h8-f5bbbec9551b0d839a6c20d2b120927a.png" id="7_ii6om"]

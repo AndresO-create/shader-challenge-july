@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://b35expveve0yp"
-path="res://.godot/imported/Super-Mario-World.ttf-bf9c832763d3486e9e6e965613415562.fontdata"
+path="res://.godot/imported/Super-Mario-World.ttf-5e08979276f13dc732312863dc7cba66.fontdata"
 
 [deps]
 
-source_file="res://Super-Mario-World.ttf"
-dest_files=["res://.godot/imported/Super-Mario-World.ttf-bf9c832763d3486e9e6e965613415562.fontdata"]
+source_file="res://Assets/Super-Mario-World.ttf"
+dest_files=["res://.godot/imported/Super-Mario-World.ttf-5e08979276f13dc732312863dc7cba66.fontdata"]
 
 [params]
 
