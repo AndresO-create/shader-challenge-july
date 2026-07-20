@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b43gfebc1ryqj" path="res://Assets/gpk_logo_transparent_1.png" id="2_25j1w"]
 [ext_resource type="Script" uid="uid://bvc1mwf1fxnka" path="res://Src/hud.gd" id="3_25j1w"]
 [ext_resource type="FontFile" uid="uid://b35expveve0yp" path="res://Super-Mario-World.ttf" id="4_25j1w"]
+[ext_resource type="Shader" uid="uid://cvhvcx1r24xmn" path="res://Src/label.gdshader" id="4_ii6om"]
 [ext_resource type="Texture2D" uid="uid://qeinm3ltcs7o" path="res://Assets/Arrow_Button.png" id="4_lv4i0"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7ngxi"]
@@ -25,6 +26,11 @@ shader_parameter/palette_goldfinch_yellow = PackedColorArray(0.09803922, 0.08627
 shader_parameter/palette_lepton_gold = PackedColorArray(0.08235294, 0.0627451, 0, 1, 0.3254902, 0.2509804, 0, 1, 0.5686275, 0.43529412, 0, 1, 0.8117647, 0.62352943, 0, 1)
 shader_parameter/palette_slick_mud = PackedColorArray(0.06666667, 0.043137256, 0.02745098, 1, 0.2627451, 0.17254902, 0.10980392, 1, 0.45882353, 0.30588236, 0.19607843, 1, 0.654902, 0.43529412, 0.2784314, 1)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_f4ea7"]
+shader = ExtResource("4_ii6om")
+shader_parameter/amp = 10.0
+shader_parameter/frequency = 0.5000000074506
+
 [node name="Test" type="Sprite2D" unique_id=121123006]
 texture_filter = 1
 material = SubResource("ShaderMaterial_7ngxi")
@@ -44,6 +50,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="CurrentPalette" type="Label" parent="HUD" unique_id=362230076]
+material = SubResource("ShaderMaterial_f4ea7")
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
