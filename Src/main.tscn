@@ -1,14 +1,17 @@
 [gd_scene format=3 uid="uid://c61v1vyg3yii"]
 
-[ext_resource type="Shader" uid="uid://bkvlfijpk73m1" path="res://Src/super_gameboy.gdshader" id="1_sqjwk"]
-[ext_resource type="Texture2D" uid="uid://bgrr2ujn8stic" path="res://Assets/chud.png" id="2_cv0qr"]
+[ext_resource type="Shader" uid="uid://bkvlfijpk73m1" path="res://Assets/super_gameboy.gdshader" id="1_sqjwk"]
+[ext_resource type="Texture2D" uid="uid://b43gfebc1ryqj" path="res://Assets/gpk_logo_transparent_1.png" id="2_25j1w"]
+[ext_resource type="Script" uid="uid://bvc1mwf1fxnka" path="res://Src/hud.gd" id="3_25j1w"]
+[ext_resource type="FontFile" uid="uid://b35expveve0yp" path="res://Super-Mario-World.ttf" id="4_25j1w"]
+[ext_resource type="Texture2D" uid="uid://qeinm3ltcs7o" path="res://Assets/Arrow_Button.png" id="4_lv4i0"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7ngxi"]
 shader = ExtResource("1_sqjwk")
 shader_parameter/threshold_a = 0.25
 shader_parameter/threshold_b = 0.5
 shader_parameter/threshold_c = 0.75
-shader_parameter/selected_palette = 11
+shader_parameter/selected_palette = 0
 shader_parameter/palette_bw = PackedColorArray(0, 0, 0, 1, 0.608, 0.608, 0.608, 1, 0.8392157, 0.8392157, 0.8392157, 1, 1, 1, 1, 1)
 shader_parameter/palette_green = PackedColorArray(0, 0.09803922, 0, 1, 0, 0.60971165, 0, 1, 0, 0.8378605, 0, 1, 0, 1, 0, 1)
 shader_parameter/palette_purple_haze = PackedColorArray(0.050980393, 0.043137256, 0.05882353, 1, 0.20392157, 0.1764706, 0.24313726, 1, 0.3529412, 0.30980393, 0.42352942, 1, 0.5058824, 0.44313726, 0.6039216, 1)
@@ -25,4 +28,64 @@ shader_parameter/palette_slick_mud = PackedColorArray(0.06666667, 0.043137256, 0
 [node name="Test" type="Sprite2D" unique_id=121123006]
 texture_filter = 1
 material = SubResource("ShaderMaterial_7ngxi")
-texture = ExtResource("2_cv0qr")
+texture = ExtResource("2_25j1w")
+script = ExtResource("3_25j1w")
+
+[node name="HUD" type="Control" parent="." unique_id=1737971821]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -225.0
+offset_top = -225.0
+offset_right = -225.0
+offset_bottom = -225.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CurrentPalette" type="Label" parent="HUD" unique_id=362230076]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -116.0
+offset_top = -79.0
+offset_right = 116.0
+offset_bottom = -56.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("4_25j1w")
+text = "Current Palette: Black&White"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Decrease" type="Button" parent="HUD" unique_id=548089748]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -36.0
+offset_right = 8.0
+offset_bottom = 36.0
+grow_vertical = 2
+scale = Vector2(-1, 1)
+icon = ExtResource("4_lv4i0")
+flat = true
+
+[node name="Increase" type="Button" parent="HUD" unique_id=1739379960]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 56.0
+offset_top = -36.0
+offset_right = 128.0
+offset_bottom = 36.0
+grow_horizontal = 0
+grow_vertical = 2
+icon = ExtResource("4_lv4i0")
+flat = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=940588961]
