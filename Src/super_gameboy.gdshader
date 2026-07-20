@@ -16,7 +16,7 @@ uniform float threshold_c : hint_range(0.0, 1.0) = 0.75;
 //selected palette
 uniform int selected_palette : hint_range(0,11) = 0;
 
-uniform vec3[4] palette_bw : source_color;
+//uniform vec3[4] palette_bw : source_color;
 uniform vec3[4] palette_green : source_color;
 uniform vec3[4] palette_purple_haze : source_color;
 uniform vec3[4] palette_purple_pride : source_color;
@@ -28,6 +28,17 @@ uniform vec3[4] palette_troll_slayer_orange : source_color;
 uniform vec3[4] palette_goldfinch_yellow : source_color;
 uniform vec3[4] palette_lepton_gold : source_color;
 uniform vec3[4] palette_slick_mud : source_color;
+
+const vec3[4] palette_bw = {vec3(0.0), vec3(0.25), vec3(0.75), vec3(1.0)};
+//const vec3[4] palette_green = {vec3(0.0, 0.33, 0.0),, 0x00d600, 0x00ff00};
+/*
+vec3[4] palette_silly_putty : source_color;
+vec3[4] palette_real_rasberry : source_color;
+vec3[4] palette_dizzy_days : source_color;
+vec3[4] palette_troll_slayer_orange : source_color;
+vec3[4] palette_goldfinch_yellow : source_color;
+vec3[4] palette_lepton_gold : source_color;
+vec3[4] palette_slick_mud : source_color;*/
 
 //return palette depending on value of selected_palette
 vec3[4] get_palette(){
