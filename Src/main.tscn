@@ -96,9 +96,19 @@ grow_vertical = 2
 icon = ExtResource("4_lv4i0")
 flat = true
 
+[node name="Background" type="ColorRect" parent="HUD" unique_id=424178286]
+z_index = -1
+layout_mode = 0
+offset_left = -294.0
+offset_top = -182.0
+offset_right = 999.0
+offset_bottom = 657.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=940588961]
 
 [node name="Frame" type="Sprite2D" parent="." unique_id=141230158]
-position = Vector2(118, 3)
+position = Vector2(123, 3)
 scale = Vector2(0.8826582, 0.8826581)
 texture = ExtResource("7_ii6om")
