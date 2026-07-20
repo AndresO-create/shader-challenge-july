@@ -66,7 +66,7 @@ void fragment() {
 	//set palette that image will change to
 	vec3[4] palette = get_palette();
 
-	//set image value to palette value depending on 
+	//set image value to palette value depending on luminance
 	vec3 final_color;
 	if (distance(colors.rgb, vec3(threshold_a)) <= threshold_a) {
 		final_color = palette[0];
