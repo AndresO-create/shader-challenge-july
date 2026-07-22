@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dxjhtejfceeyq"]
+
+[ext_resource type="Shader" uid="uid://fqdulwjtmfkl" path="res://Src/shaders/super_gameboy.gdshader" id="1_n8c4f"]
+[ext_resource type="Texture2D" uid="uid://b43gfebc1ryqj" path="res://Assets/gpk_logo_transparent_1.png" id="2_n8c4f"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7ngxi"]
+shader = ExtResource("1_n8c4f")
+shader_parameter/threshold_a = 0.25
+shader_parameter/threshold_b = 0.5
+shader_parameter/threshold_c = 0.75
+shader_parameter/selected_palette = 5
+shader_parameter/palette_green = PackedColorArray(0, 0.09803922, 0, 1, 0, 0.60971165, 0, 1, 0, 0.8378605, 0, 1, 0, 1, 0, 1)
+shader_parameter/palette_purple_haze = PackedColorArray(0.050980393, 0.043137256, 0.05882353, 1, 0.20392157, 0.1764706, 0.24313726, 1, 0.3529412, 0.30980393, 0.42352942, 1, 0.5058824, 0.44313726, 0.6039216, 1)
+shader_parameter/palette_purple_pride = PackedColorArray(0.06666667, 0.047058824, 0.07058824, 1, 0.2627451, 0.1882353, 0.28627452, 1, 0.45882353, 0.3254902, 0.5019608, 1, 0.654902, 0.46666667, 0.7176471, 1)
+shader_parameter/palette_marvelous_pink = PackedColorArray(0.08627451, 0.07058824, 0.07450981, 1, 0.3372549, 0.27450982, 0.3019608, 1, 0.5921569, 0.48235294, 0.5254902, 1, 0.84705883, 0.6901961, 0.7529412, 1)
+shader_parameter/palette_silly_putty = PackedColorArray(0.09411765, 0.06666667, 0.07450981, 1, 0.3764706, 0.27450982, 0.29803923, 1, 0.654902, 0.47843137, 0.5254902, 1, 0.9372549, 0.91764706, 0.9843137, 1)
+shader_parameter/palette_real_rasberry = PackedColorArray(0.08627451, 0.047058824, 0.06666667, 1, 0.34901962, 0.1882353, 0.2627451, 1, 0.6117647, 0.3254902, 0.45882353, 1, 0.8745098, 0.46666667, 0.654902, 1)
+shader_parameter/palette_dizzy_days = PackedColorArray(0.08235294, 0.03137255, 0.019607844, 1, 0.3254902, 0.1254902, 0.07450981, 1, 0.5686275, 0.21568628, 0.12941177, 1, 0.8117647, 0.30980393, 0.18431373, 1)
+shader_parameter/palette_troll_slayer_orange = PackedColorArray(0.09803922, 0.0627451, 0.03137255, 1, 0.3882353, 0.2509804, 0.1254902, 1, 0.6784314, 0.43529412, 0.21568628, 1, 0.96862745, 0.62352943, 0.30980393, 1)
+shader_parameter/palette_goldfinch_yellow = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+shader_parameter/palette_lepton_gold = PackedColorArray(0.08235294, 0.0627451, 0, 1, 0.3254902, 0.2509804, 0, 1, 0.5686275, 0.43529412, 0, 1, 0.8117647, 0.62352943, 0, 1)
+shader_parameter/palette_slick_mud = PackedColorArray(0.06666667, 0.043137256, 0.02745098, 1, 0.2627451, 0.17254902, 0.10980392, 1, 0.45882353, 0.30588236, 0.19607843, 1, 0.654902, 0.43529412, 0.2784314, 1)
+
+[node name="Test" type="Sprite2D" unique_id=121123006]
+texture_filter = 1
+material = SubResource("ShaderMaterial_7ngxi")
+texture = ExtResource("2_n8c4f")
