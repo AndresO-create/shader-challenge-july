@@ -29,8 +29,8 @@ uniform vec3[4] palette_goldfinch_yellow : source_color;
 uniform vec3[4] palette_lepton_gold : source_color;
 uniform vec3[4] palette_slick_mud : source_color;
 
-const vec3[4] palette_bw = {vec3(0.0), vec3(0.25), vec3(0.75), vec3(1.0)};
-//const vec3[4] palette_green = {vec3(0.0, 0.33, 0.0),, 0x00d600, 0x00ff00};
+const vec3[4] black_white = {vec3(0.0), vec3(0.25), vec3(0.75), vec3(1.0)};
+const vec3[4] green = {vec3(0, 25, 0),vec3(0, 155, 0), vec3(0, 214, 0), vec3(0, 255, 0)};
 /*
 vec3[4] palette_silly_putty : source_color;
 vec3[4] palette_real_rasberry : source_color;
@@ -44,9 +44,9 @@ vec3[4] palette_slick_mud : source_color;*/
 vec3[4] get_palette(){
 		switch (selected_palette){
 		case 0:
-			return palette_bw;
+			return black_white;
 		case 1:
-			return palette_green;
+			return green;
 		case 2:
 			return palette_purple_haze;
 		case 3:
@@ -76,7 +76,10 @@ void fragment() {
 	
 	//set palette that image will change to
 	vec3[4] palette = get_palette();
-
+	
+	for (int i = 0; i < 4; i++){
+		palette[i] /= vec3(255.0);
+	}
 	//set image value to palette value depending on 
 	vec3 final_color;
 	if (distance(colors.rgb, vec3(threshold_a)) <= threshold_a) {
